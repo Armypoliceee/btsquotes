@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Little ARMY Love Note 💌</title>
+  <style>
+    body {
+      background-color: #fff0f5;
+      font-family: 'Segoe UI', sans-serif;
+      color: #4b0082;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .note-box {
+      background-color: #ffffff;
+      border: 2px dashed #dda0dd;
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 600px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .quote {
+      font-size: 18px;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .member {
+      font-weight: bold;
+      color: #6a0dad;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="note-box">
+    <div class="quote" id="quoteText">Loading your love note...</div>
+    <div class="member" id="quoteMember"></div>
+  </div>
+
+  <script>
+    const quotes = [
+      { text: "I urge you to listen to your heart. Things may feel a little difficult right now, but somewhere out there, luck and opportunity is waiting for you. I believe that.", member: "BTS V" },
+      { text: "Don’t lose the people beside you because of your mistakes and wrongs. And live your life to the fullest.", member: "BTS Jungkook" },
+      { text: "Life is tough and things don’t always work out well, but we should be brave and go on with our lives.", member: "BTS SUGA" },
+      { text: "Not so perfect, but so beautiful.", member: "BTS Jin" },
+      { text: "Those who keep trying without giving up are the ones who succeed.", member: "BTS Jin" },
+      { text: "Emotions are so different in every situation and every moment, so I think to agonise every moment is what life is.", member: "BTS SUGA" },
+      { text: "Back yourself and look at the mirror. If you want to be a piece, make it an original.", member: "BTS RM" },
+      { text: "I hope you will never give up. Remember there is a person here in Korea, in the city of Seoul, who understands you.", member: "BTS Jimin" },
+      { text: "If you want to love others, I think you should love yourself first.", member: "BTS RM" },
+      { text: "Don't be trapped in someone else's dream.", member: "BTS V" },
+      { text: "Those who want to look more youthful should live life with a young heart.", member: "BTS Jin" },
+      { text: "Once your heart is moved, it will develop into something better and positive.", member: "BTS Jimin" },
+      { text: "When things get tough, look at the people who love you! You will get energy from them.", member: "BTS J-Hope" }
+    ];
+
+    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    document.getElementById("quoteText").textContent = `"${randomQuote.text}"`;
+    document.getElementById("quoteMember").textContent = `– ${randomQuote.member}`;
+  </script>
+
+</body>
+</html>
